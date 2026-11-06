@@ -1,0 +1,20 @@
+workIn - gerenciador de tarefas ultrasimplificado (PHP + MySQL + RedBeanPHP)
+
+Como usar:
+1) Copie todos os arquivos para a pasta do XAMPP (ex.: htdocs/sistema1) e ligue Apache + MySQL.
+2) Abra http://localhost/sistema1/index.php
+   - O banco "workin", as tabelas e o usuário padrão são criados automaticamente.
+   - Usuário padrão: admin@workin.com / 123456 (o sistema pede para trocar e-mail e senha no primeiro acesso).
+3) Se o seu MySQL tiver senha, ajuste as variáveis no topo do config.php.
+
+Páginas:
+ index.php (login) -> landing.php (resumo + próximas do vencimento)
+ tarefas.php (colunas Novas / Ativas / Fechadas + filtros por prioridade e prazo)
+ tarefa_ver.php (detalhe + checklist) | tarefa_nova.php (cadastro e edição) | tarefa_excluir.php
+ equipe.php | lixeira.php | perfil.php
+
+Regras:
+ - Status: Nova, Ativa e Fechada.
+ - Tarefas Fechadas ficam visíveis por 7 dias (config.php, $DIAS_FECHADA) e depois vão sozinhas para a Lixeira.
+ - Cada tarefa tem prazo, vários responsáveis e uma checklist própria.
+ - Fotos de perfil ficam na pasta fotos/.
